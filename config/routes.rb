@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # get 'questions/edit'
   root "questions#index"
   resources :questions do
+    resource :user, only: [:new, :show]
     resources :answers
   end
 
